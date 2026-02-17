@@ -5,28 +5,6 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -39,4 +17,31 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+/* KODE FOR ARBEIDSKRAV 2 - LAYOUT */
+main {
+  background-color: #efefef;
+  border-radius: 20px;
+  padding: 1rem;
+  color: #000;
+}
+
+.handleliste{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+  text-transform: uppercase;
+
+  input{
+    padding: 0.75rem;
+    border-radius: 5px;
+  }
+}
+
+.flex-r {
+  display: flex;
+  flex-wrap: wrap;
 }
