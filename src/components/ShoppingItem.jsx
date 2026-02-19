@@ -6,6 +6,7 @@ export default function ShoppingItem({id, name, quantity, setItemList}){
     <article className="item-card">
       <input type="checkbox"/>
       <h3>{name}</h3>
+      <input type="number" min={1} value={quantity} />
     </article>
   )
 }

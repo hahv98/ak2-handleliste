@@ -24,10 +24,12 @@ export default function AddForm({addItem, setAddItem, setItemList}){
 
       <label htmlFor="amount">Antall</label>
         <input 
-          type="number" 
+          type="number"
+          name="quantity" 
           id="quantity" 
           min={1} 
           placeholder="2"
+          onChange={inputChange}
         />
 
       <button className="add-btn">Legg til vare</button>
