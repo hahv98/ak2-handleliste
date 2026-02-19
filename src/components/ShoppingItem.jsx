@@ -1,44 +1,18 @@
-export default function ShoppingItem({id, name, quantity, setItemList}){
+export default function ShoppingItem({id, name, quantity,check, updateQty, updateCheck}){
   
+  const handleQtyChange = (e) =>{
+    updateQty(id, e.target.value)
+  }
 
+  const handleCheckChange = (e) => {
+    updateCheck(id, e.target.checked)
+  }
 
   return(
     <article className="item-card">
-      <input type="checkbox"/>
+      <input type="checkbox" checked={check} onChange={handleCheckChange}/>
       <h3>{name}</h3>
-      <input type="number" min={1} value={quantity} />
+      <input className="list-input" type="number" min={1} value={quantity} onChange={handleQtyChange}/>
     </article>
   )
 }
-
-
-
-
-
-
-
-// function ShoppingItem({ item, togglePurchased, updateQuantity }) {
-//   return (
-//     <li>
-//       <label>
-//         <input
-//           type="checkbox"
-//           checked={item.purchased}
-//           onChange={() => togglePurchased(item.id)}
-//         />
-//         {item.name}
-//       </label>
-
-//       <input
-//         type="number"
-//         min="1"
-//         value={item.quantity}
-//         onChange={(e) =>
-//           updateQuantity(item.id, Number(e.target.value))
-//         }
-//       />
-//     </li>
-//   );
-// }
-
-// export default ShoppingItem;
